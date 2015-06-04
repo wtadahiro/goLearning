@@ -7,7 +7,7 @@ import(
 )
 
 func main(){
-	inSlice := createRandSlice(100)
+	inSlice := generateRandomSlice(100)
 	sortedSlice := bucketSort(inSlice)
 	fmt.Println("-------beforeSort-------")
 	fmt.Println(inSlice)
@@ -33,7 +33,7 @@ func bucketSort(inSlice []int) []int{
 }
 
 
-func createRandSlice(num int) []int{
+func generateRandomSlice(num int) []int{
 	var slice []int
 
 	rand.Seed(time.Now().UnixNano())
