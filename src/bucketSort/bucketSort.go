@@ -17,7 +17,7 @@ func main(){
 }
 
 func bucketSort(inSlice []int) []int{
-	var target []int
+	var outSlice []int
 
 	bucket := make([][]int, 100)
 	for i:=0; i<len(inSlice); i++{
@@ -26,10 +26,10 @@ func bucketSort(inSlice []int) []int{
 
 	for i:=0; i<100; i++{
 		for k:=0; k<len(bucket[i]); k++{
-			target = append(target, bucket[i][k])
+			outSlice = append(outSlice, bucket[i][k])
 		}
 	}
-	return target
+	return outSlice
 }
 
 
